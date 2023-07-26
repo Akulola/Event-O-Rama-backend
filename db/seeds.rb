@@ -102,7 +102,7 @@ event7 = Event.create(
   agenda: '12:00 PM - Food Tasting, 03:00 PM - Cooking Demonstrations, 08:00 PM - Food Awards'
 )
 
-event6 = Event.create(
+event8 = Event.create(
   title: 'Charity Gala Dinner',
   description: 'An elegant charity gala dinner to raise funds for underprivileged children',
   start_time: DateTime.new(2023, 10, 10, 18, 30),
@@ -115,13 +115,13 @@ event6 = Event.create(
   agenda: 'Cocktail reception, Silent auction, Dinner, Keynote speakers, Entertainment'
 )
 
-attendee1 = Attendee.create(event: event1, user: user2, name: 'Eric', surname: 'Mongare', email: 'eric@example.com')
-attendee2 = Attendee.create(event: event2, user: user1, name: 'Rhona', surname: 'Joy', email: 'rhona@example.com')
-attendee3 = Attendee.create(event: event3, user: user2, name: 'Mary', surname: 'Mukami', email: 'mary@example.com')
-attendee4 = Attendee.create(event: event4, user: user1, name: 'Ruth', surname: 'Osukuku', email: 'ruth@example.com')
-attendee5 = Attendee.create(event: event5, user: user2, name: 'Kenneth', surname: 'Wachira', email: 'kenneth@example.com')
-attendee6 = Attendee.create(event: event6, user: user1, name: 'Reagan', surname: 'Munene', email: 'reagan@example.com')
-attendee7 = Attendee.create(event: event7, user: user2, name: 'Isaac', surname: 'Baraka', email: 'isaac@example.com')
+attendee1 = Attendee.create(event: event1, user: user1, name: 'Eric', surname: 'Mongare', email: 'eric@example.com')
+attendee2 = Attendee.create(event: event2, user: user2, name: 'Rhona', surname: 'Joy', email: 'rhona@example.com')
+attendee3 = Attendee.create(event: event3, user: user1, name: 'Mary', surname: 'Mukami', email: 'mary@example.com')
+attendee4 = Attendee.create(event: event4, user: user2, name: 'Ruth', surname: 'Osukuku', email: 'ruth@example.com')
+attendee5 = Attendee.create(event: event5, user: user1, name: 'Kenneth', surname: 'Wachira', email: 'kenneth@example.com')
+attendee6 = Attendee.create(event: event6, user: user2, name: 'Reagan', surname: 'Munene', email: 'reagan@example.com')
+attendee7 = Attendee.create(event: event7, user: user1, name: 'Isaac', surname: 'Baraka', email: 'isaac@example.com')
 attendee8 = Attendee.create(event: event1, user: user1, name: 'Joy', surname: 'Mvoi', email: 'mvoi@example.com')
 attendee9 = Attendee.create(event: event2, user: user2, name: 'Rose', surname: 'Mvoi', email: 'rose@example.com')
 attendee10 = Attendee.create(event: event3, user: user1, name: 'Ruth' , surname: 'Onyancha', email: 'onyancha@example.com')
@@ -129,5 +129,7 @@ attendee11 = Attendee.create(event: event4, user: user2, name: 'Catherine' , sur
 attendee12 = Attendee.create(event: event5, user: user1, name: 'Michael', surname: 'Mokua', email: 'mokua@example.com')
 attendee13 = Attendee.create(event: event6, user: user2, name: 'Joy', surname: 'Makena', email: 'makena@example.com')
 attendee14 = Attendee.create(event: event7, user: user1, name: 'Joshua', surname: 'Munene', email: 'munene@example.com')
+attendee15 = Attendee.create(event: event8, user: user2, name: 'Joan', surname: 'Kiama', email: 'kimama@example.com')
+attendee16 = Attendee.create(event: event8, user: user2, name: 'Mercy',surname: 'Kairuthi', email: 'kairuthi@example.com')
 
 puts "✅ Done seeding!"
