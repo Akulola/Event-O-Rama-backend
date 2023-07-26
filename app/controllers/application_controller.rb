@@ -25,19 +25,6 @@ class ApplicationController < Sinatra::Base
     event.to_json
   end
 
-  patch '/events/:id' do
-    event = Event.find_by(id: params[:id])
-    event.update(
-      title: params[:title],
-      description: params[:description],
-      start_time: params[:start_time],
-      end_time: params[:end_time],
-      location: params[:location],
-      agenda: params[:agenda]
-    )
-    event.to_json
-  end
-
   delete '/events/:id' do
     event = Event.find_by(id: params[:id])
     event.destroy
@@ -52,16 +39,6 @@ class ApplicationController < Sinatra::Base
 
   post '/attendees' do
     attendee = Attendee.create(
-      name: params[:name],
-      surname: params[:surname],
-      email: params[:email]
-    )
-    attendee.to_json
-  end
-
-  patch '/attendees/:id' do
-    attendee = Attendee.find_by(id: params[:id])
-    attendee.update(
       name: params[:name],
       surname: params[:surname],
       email: params[:email]
@@ -101,27 +78,7 @@ class ApplicationController < Sinatra::Base
     user.to_json
   end
 
-  post '/users' do
-    user = User.create(
-      name: params[:name],
-      email: params[:email]
-    )
-    user.to_json
-  end
-
-  patch '/users/:id' do
-    user = User.find_by(id: params[:id])
-    user.update(
-      name: params[:name],
-      email: params[:email]
-    )
-    user.to_json
-  end
-
-  delete '/users/:id' do
-    user = User.find_by(id: params[:id])
-    user.destroy
-  end
+  
 
   # Get events for a specific user
 
