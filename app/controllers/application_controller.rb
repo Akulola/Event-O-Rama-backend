@@ -1,21 +1,18 @@
-
-
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
 
-  
+  # Events CRUD
+
   get '/events' do
     events = Event.all
     events.to_json
   end
 
-  # Show route for a specific event
   get '/events/:id' do
     event = Event.find_by(id: params[:id])
     event.to_json
   end
 
-  # Create route for events
   post '/events' do
     event = Event.create(
       title: params[:title],
@@ -28,7 +25,6 @@ class ApplicationController < Sinatra::Base
     event.to_json
   end
 
-  # Update route for events
   patch '/events/:id' do
     event = Event.find_by(id: params[:id])
     event.update(
@@ -42,66 +38,96 @@ class ApplicationController < Sinatra::Base
     event.to_json
   end
 
-  # Delete route for events
   delete '/events/:id' do
     event = Event.find_by(id: params[:id])
     event.destroy
-    status 204
   end
 
-  # Get events belonging to a user
-  get '/users/:user_id/events' do
-    user = User.find_by(id: params[:user_id])
-    events = user.events
-    events.to_json
+  # Attendees CRUD
+
+  get '/attendees/:id' do
+    attendee = Attendee.find_by(id: params[:id])
+    attendee.to_json
   end
 
-  # Get the user associated with an event
-  get '/events/:id/user' do
-    event = Event.find_by(id: params[:id])
-    user = event.user
-    user.to_json
+  post '/attendees' do
+    attendee = Attendee.create(
+      name: params[:name],
+      surname: params[:surname],
+      email: params[:email]
+    )
+    attendee.to_json
   end
 
-  # Get attendees for an event
+  patch '/attendees/:id' do
+    attendee = Attendee.find_by(id: params[:id])
+    attendee.update(
+      name: params[:name],
+      surname: params[:surname],
+      email: params[:email]
+    )
+    attendee.to_json
+  end
+
+  delete '/attendees/:id' do
+    attendee = Attendee.find_by(id: params[:id])
+    attendee.destroy
+  end
+
+  # Get attendees for a specific event
+
   get '/events/:id/attendees' do
     event = Event.find_by(id: params[:id])
     attendees = event.attendees
     attendees.to_json
   end
 
-  # Get events for a user
-  get '/users/:user_id/events' do
-    user = User.find_by(id: params[:user_id])
-    events = user.events
+  # Get events for a specific attendee
+
+  get '/attendees/:id/events' do
+    attendee = Attendee.find_by(id: params[:id])
+    events = attendee.events
     events.to_json
   end
 
-  # Create an attendee for an event
-  post '/events/:id/attendees' do
-    event = Event.find_by(id: params[:id])
-    user = User.find_by(id: params[:user_id])
 
-    attendee = Attendee.create(event: event, user: user name: params[:name], surname: params[:surname], email: params[:email])
-    attendee.to_json
+  get '/users' do
+    users = User.all
+    users.to_json
   end
 
-  # Update an attendee
-  patch '/events/:event_id/attendees/:id' do
-    event = Event.find_by(id: params[:event_id])
-    attendee = Attendee.find_by(id: params[:id])
+  get '/users/:id' do
+    user = User.find_by(id: params[:id])
+    user.to_json
+  end
 
-    attendee.update(
-      event: event
-      # You can add more attributes to update here if needed
+  post '/users' do
+    user = User.create(
+      name: params[:name],
+      email: params[:email]
     )
-    attendee.to_json
+    user.to_json
   end
 
-  # Delete an attendee
-  delete '/events/:event_id/attendees/:id' do
-    attendee = Attendee.find_by(id: params[:id])
-    attendee.destroy
-    status 204
+  patch '/users/:id' do
+    user = User.find_by(id: params[:id])
+    user.update(
+      name: params[:name],
+      email: params[:email]
+    )
+    user.to_json
+  end
+
+  delete '/users/:id' do
+    user = User.find_by(id: params[:id])
+    user.destroy
+  end
+
+  # Get events for a specific user
+
+  get '/users/:id/events' do
+    user = User.find_by(id: params[:id])
+    events = user.events
+    events.to_json
   end
 end
