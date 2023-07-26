@@ -1,7 +1,7 @@
 puts  "Deleting all seeds"
-Event.delete_all
-User.delete_all
-Attendee.delete_all
+Event.destroy_all
+User.destroy_all
+Attendee.destroy_all
 
 puts "🌱 Seeding spices..."
 
@@ -102,6 +102,18 @@ event7 = Event.create(
   agenda: '12:00 PM - Food Tasting, 03:00 PM - Cooking Demonstrations, 08:00 PM - Food Awards'
 )
 
+event6 = Event.create(
+  title: 'Charity Gala Dinner',
+  description: 'An elegant charity gala dinner to raise funds for underprivileged children',
+  start_time: DateTime.new(2023, 10, 10, 18, 30),
+  end_time: DateTime.new(2023, 10, 10, 23, 0),
+  location: 'Grand Ballroom, Parkview Hotel, London',
+  user_id: user2.id,
+  image_url: 'https://images.unsplash.com/photo-1530871563722-8b83f8ce57f8',
+  created_at: Time.now,
+  updated_at: Time.now,
+  agenda: 'Cocktail reception, Silent auction, Dinner, Keynote speakers, Entertainment'
+)
 
 attendee1 = Attendee.create(event: event1, user: user2, name: 'Eric', surname: 'Mongare', email: 'eric@example.com')
 attendee2 = Attendee.create(event: event2, user: user1, name: 'Rhona', surname: 'Joy', email: 'rhona@example.com')
