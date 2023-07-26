@@ -8,6 +8,8 @@ puts "🌱 Seeding spices..."
 # Seed your database here
 user1 = User.create(name: 'Angela', email: 'angela@example.com')
 user2 = User.create(name: 'Tony', email: 'tony@example.com')
+user3 = User.create(name: 'Kai', email: 'kai@example.com')
+user4 = User.create(name: 'Joan', email: 'joan@example.com')
 
 # Create events associated with users
 event1 = Event.create(
