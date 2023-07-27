@@ -57,7 +57,7 @@ event4 = Event.create(
   end_time: DateTime.new(2023, 8, 15, 22, 0),
   location: 'Central Park, New York',
   user_id: user2.id,
-  image_url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tastingtable.com%2F693946%2Fsummer-music-festivals-travel%2F&psig=AOvVaw1saLhIeTs5OGiAD8VVGAuX&ust=1690541997164000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCKiTge_droADFQAAAAAdAAAAABAD',
+  image_url: 'https://image.jimcdn.com/app/cms/image/transf/dimension=1190x10000:format=jpg/path/sa6549607c78f5c11/image/ia549b5935af7218d/version/1554203275/glastonbury-festival-best-summer-music-festivals.jpg',
   created_at: Time.now,
   updated_at: Time.now,
   agenda: '12:00 PM - Opening Ceremony, 02:00 PM - Live Performances, 08:00 PM - Closing Party'
@@ -109,7 +109,7 @@ event8 = Event.create(
   end_time: DateTime.new(2023, 10, 10, 23, 0),
   location: 'Grand Ballroom, Parkview Hotel, London',
   user_id: user2.id,
-  image_url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fnacephilly.com%2F2019%2F02%2Fnace-members-team-up-for-charity-event%2F&psig=AOvVaw0EnmPXoKZpPFHV1hMddMQw&ust=1690541889408000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCOC06r3droADFQAAAAAdAAAAABAb',
+  image_url: 'https://img.freepik.com/free-vector/hand-drawn-charity-event-photocall-template_23-2149404388.jpg',
   created_at: Time.now,
   updated_at: Time.now,
   agenda: 'Cocktail reception, Silent auction, Dinner, Keynote speakers, Entertainment'
