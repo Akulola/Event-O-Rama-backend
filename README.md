@@ -6,7 +6,9 @@ The backend is built using Ruby and Sinatra framework, and it provides RESTful A
 ## Getting Started ##
 To run the backend server on your local machine, follow these steps:
 
-Clone the repository: git clone https://github.com/Akulola/event-o-rama-backend.git
+Clone the repository:
+Backend: git clone https://github.com/Akulola/event-o-rama-backend.git
+Front-end: git clone https://github.com/Akulola/Event-O-Rama-frontend
 Navigate to the project directory: cd event-o-rama-backend
 Install dependencies: bundle install
 Set up the database: rake db:migrate
