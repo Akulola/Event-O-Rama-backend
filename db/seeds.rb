@@ -57,7 +57,7 @@ event4 = Event.create(
   end_time: DateTime.new(2023, 8, 15, 22, 0),
   location: 'Central Park, New York',
   user_id: user2.id,
-  image_url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fviatravelers.com%2Fsummer-music-festivals%2F&psig=AOvVaw1xuMUpNEXIAGlskaPLu7ZW&ust=1690477212298000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCJC795_0rIADFQAAAAAdAAAAABAD',
+  image_url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tastingtable.com%2F693946%2Fsummer-music-festivals-travel%2F&psig=AOvVaw1saLhIeTs5OGiAD8VVGAuX&ust=1690541997164000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCKiTge_droADFQAAAAAdAAAAABAD',
   created_at: Time.now,
   updated_at: Time.now,
   agenda: '12:00 PM - Opening Ceremony, 02:00 PM - Live Performances, 08:00 PM - Closing Party'
@@ -109,7 +109,7 @@ event8 = Event.create(
   end_time: DateTime.new(2023, 10, 10, 23, 0),
   location: 'Grand Ballroom, Parkview Hotel, London',
   user_id: user2.id,
-  image_url: 'https://images.unsplash.com/photo-1530871563722-8b83f8ce57f8',
+  image_url: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fnacephilly.com%2F2019%2F02%2Fnace-members-team-up-for-charity-event%2F&psig=AOvVaw0EnmPXoKZpPFHV1hMddMQw&ust=1690541889408000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCOC06r3droADFQAAAAAdAAAAABAb',
   created_at: Time.now,
   updated_at: Time.now,
   agenda: 'Cocktail reception, Silent auction, Dinner, Keynote speakers, Entertainment'
